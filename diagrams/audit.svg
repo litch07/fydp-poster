@@ -1,0 +1,77 @@
+<svg width="1000" height="250" viewBox="0 0 1000 250" xmlns="http://www.w3.org/2000/svg" font-family="Calibri, Carlito, sans-serif">
+  <defs>
+    <!-- Base definitions to reuse -->
+    <g id="robot-base">
+      <line x1="50" y1="15" x2="50" y2="25" stroke="#1F3A5F" stroke-width="3" stroke-linecap="round"/>
+      <circle cx="50" cy="15" r="4" fill="#E8742A" stroke="none"/>
+      <rect x="25" y="25" width="50" height="40" rx="6" fill="#F4F6F8" stroke="#1F3A5F" stroke-width="3"/>
+      <circle cx="38" cy="38" r="6" fill="white" stroke="#1F3A5F" stroke-width="3"/>
+      <circle cx="62" cy="38" r="6" fill="white" stroke="#1F3A5F" stroke-width="3"/>
+      <rect x="35" y="65" width="30" height="35" rx="6" fill="#1F3A5F" stroke="none"/>
+    </g>
+  </defs>
+
+  <style>
+    .label { fill: #222222; font-size: 28px; text-anchor: middle; }
+  </style>
+
+  <!-- 1. Thinking -->
+  <g id="audit-thinking" transform="translate(50, 40) scale(1.2)">
+    <use href="#robot-base" />
+    <circle cx="40" cy="36" r="2.5" fill="#1F3A5F" />
+    <circle cx="64" cy="36" r="2.5" fill="#1F3A5F" />
+    <line x1="46" y1="52" x2="54" y2="52" stroke="#1F3A5F" stroke-width="3" stroke-linecap="round"/>
+    <path d="M 35 75 Q 25 80 25 95" stroke="#1F3A5F" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <path d="M 65 75 Q 75 80 70 55" stroke="#1F3A5F" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <text x="50" y="140" class="label">Thinking</text>
+  </g>
+
+  <!-- 2. Holding up a card -->
+  <g id="audit-card" transform="translate(230, 40) scale(1.2)">
+    <use href="#robot-base" />
+    <circle cx="41" cy="38" r="2.5" fill="#1F3A5F" />
+    <circle cx="65" cy="38" r="2.5" fill="#1F3A5F" />
+    <line x1="46" y1="52" x2="54" y2="52" stroke="#1F3A5F" stroke-width="3" stroke-linecap="round"/>
+    <path d="M 35 75 Q 25 80 25 95" stroke="#1F3A5F" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <path d="M 65 75 L 85 60" stroke="#1F3A5F" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <rect x="75" y="35" width="22" height="26" rx="3" fill="white" stroke="#1F3A5F" stroke-width="3"/>
+    <path d="M 79 48 L 84 53 L 91 43" stroke="#3E8E6B" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="50" y="140" class="label">Card</text>
+  </g>
+
+  <!-- 3. Looking into hand mirror -->
+  <g id="audit-mirror" transform="translate(410, 40) scale(1.2)">
+    <use href="#robot-base" />
+    <circle cx="35" cy="38" r="2.5" fill="#1F3A5F" />
+    <circle cx="59" cy="38" r="2.5" fill="#1F3A5F" />
+    <line x1="46" y1="52" x2="54" y2="52" stroke="#1F3A5F" stroke-width="3" stroke-linecap="round"/>
+    <path d="M 35 75 L 15 65" stroke="#1F3A5F" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <path d="M 65 75 Q 75 80 75 95" stroke="#1F3A5F" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <line x1="15" y1="65" x2="5" y2="75" stroke="#1F3A5F" stroke-width="3" stroke-linecap="round"/>
+    <ellipse cx="18" cy="55" rx="8" ry="12" fill="#F4F6F8" stroke="#1F3A5F" stroke-width="3"/>
+    <path d="M 14 50 A 6 9 0 0 1 20 50" stroke="#1F3A5F" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.3"/>
+    <text x="50" y="140" class="label">Self-Review</text>
+  </g>
+
+  <!-- 4. Happy -->
+  <g id="audit-happy" transform="translate(590, 40) scale(1.2)">
+    <use href="#robot-base" />
+    <circle cx="38" cy="38" r="2.5" fill="#1F3A5F" />
+    <circle cx="62" cy="38" r="2.5" fill="#1F3A5F" />
+    <path d="M 44 50 Q 50 56 56 50" stroke="#1F3A5F" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <path d="M 35 72 Q 20 60 20 45" stroke="#1F3A5F" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <path d="M 65 72 Q 80 60 80 45" stroke="#1F3A5F" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <text x="50" y="140" class="label">Happy</text>
+  </g>
+
+  <!-- 5. Worried / Oops -->
+  <g id="audit-worried" transform="translate(770, 40) scale(1.2)">
+    <use href="#robot-base" />
+    <circle cx="39" cy="41" r="2.5" fill="#1F3A5F" />
+    <circle cx="61" cy="41" r="2.5" fill="#1F3A5F" />
+    <ellipse cx="50" cy="53" rx="3" ry="4" fill="#1F3A5F" stroke="none"/>
+    <path d="M 35 75 Q 25 70 20 50" stroke="#1F3A5F" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <path d="M 65 75 Q 75 70 80 50" stroke="#1F3A5F" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <text x="50" y="140" class="label">Worried</text>
+  </g>
+</svg>

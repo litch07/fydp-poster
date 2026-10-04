@@ -1,0 +1,199 @@
+<svg width="2400" height="420" viewBox="0 0 2400 420" xmlns="http://www.w3.org/2000/svg" font-family="Calibri, Carlito, sans-serif">
+  <defs>
+    <marker id="arrowhead" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+      <path d="M 0 0 L 8 4 L 0 8 Z" fill="#E8742A" />
+    </marker>
+    <marker id="small-arrowhead" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
+      <path d="M 0 0 L 6 3 L 0 6 Z" fill="#1F3A5F" />
+    </marker>
+
+    <!-- Robot Base (neutral) -->
+    <g id="audit-base">
+      <line x1="50" y1="15" x2="50" y2="25" stroke="#1F3A5F" stroke-width="3" stroke-linecap="round"/>
+      <circle cx="50" cy="15" r="4" fill="#E8742A" stroke="none"/>
+      <rect x="35" y="65" width="30" height="35" rx="6" fill="#1F3A5F" stroke="none"/>
+      <rect x="25" y="25" width="50" height="40" rx="6" fill="#F4F6F8" stroke="#1F3A5F" stroke-width="3"/>
+      <circle cx="38" cy="38" r="6" fill="white" stroke="#1F3A5F" stroke-width="3"/>
+      <circle cx="62" cy="38" r="6" fill="white" stroke="#1F3A5F" stroke-width="3"/>
+    </g>
+
+    <!-- Head only (for outcomes) -->
+    <g id="audit-head-happy">
+      <line x1="50" y1="15" x2="50" y2="25" stroke="#1F3A5F" stroke-width="3" stroke-linecap="round"/>
+      <circle cx="50" cy="15" r="4" fill="#E8742A" stroke="none"/>
+      <rect x="25" y="25" width="50" height="40" rx="6" fill="#F4F6F8" stroke="#1F3A5F" stroke-width="3"/>
+      <circle cx="38" cy="38" r="6" fill="white" stroke="#1F3A5F" stroke-width="3"/>
+      <circle cx="62" cy="38" r="6" fill="white" stroke="#1F3A5F" stroke-width="3"/>
+      <circle cx="38" cy="38" r="2.5" fill="#1F3A5F" />
+      <circle cx="62" cy="38" r="2.5" fill="#1F3A5F" />
+      <path d="M 44 50 Q 50 56 56 50" stroke="#1F3A5F" stroke-width="3" fill="none" stroke-linecap="round"/>
+    </g>
+    <g id="audit-head-worried">
+      <line x1="50" y1="15" x2="50" y2="25" stroke="#1F3A5F" stroke-width="3" stroke-linecap="round"/>
+      <circle cx="50" cy="15" r="4" fill="#E8742A" stroke="none"/>
+      <rect x="25" y="25" width="50" height="40" rx="6" fill="#F4F6F8" stroke="#1F3A5F" stroke-width="3"/>
+      <circle cx="38" cy="38" r="6" fill="white" stroke="#1F3A5F" stroke-width="3"/>
+      <circle cx="62" cy="38" r="6" fill="white" stroke="#1F3A5F" stroke-width="3"/>
+      <circle cx="39" cy="41" r="2.5" fill="#1F3A5F" />
+      <circle cx="61" cy="41" r="2.5" fill="#1F3A5F" />
+      <ellipse cx="50" cy="53" rx="3" ry="4" fill="#1F3A5F" stroke="none"/>
+    </g>
+
+    <!-- Icons -->
+    <g id="icon-check">
+      <circle cx="20" cy="20" r="16" fill="none" stroke="#3E8E6B" stroke-width="4"/>
+      <path d="M 12 20 L 17 25 L 28 14" stroke="#3E8E6B" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+    <g id="icon-cross">
+      <circle cx="20" cy="20" r="16" fill="none" stroke="#C0504D" stroke-width="4"/>
+      <path d="M 14 14 L 26 26 M 26 14 L 14 26" stroke="#C0504D" stroke-width="4" fill="none" stroke-linecap="round"/>
+    </g>
+  </defs>
+
+  <!-- Scene 1: Question -->
+  <g id="scene-1">
+    <rect x="30" y="80" width="280" height="270" rx="10" fill="white" stroke="#1F3A5F" stroke-width="4"/>
+    <text x="170" y="190" font-size="120" font-weight="bold" fill="#1F3A5F" text-anchor="middle">?</text>
+    <line x1="60" y1="220" x2="280" y2="220" stroke="#F4F6F8" stroke-width="3"/>
+    <text x="170" y="260" font-size="40" fill="#6B7280" text-anchor="middle">math · logic</text>
+    <text x="170" y="320" font-size="40" fill="#6B7280" text-anchor="middle">commonsense</text>
+
+    <!-- Audit Thinking -->
+    <g transform="translate(280, 80) scale(3)">
+      <use href="#audit-base" />
+      <circle cx="40" cy="36" r="2.5" fill="#1F3A5F" />
+      <circle cx="64" cy="36" r="2.5" fill="#1F3A5F" />
+      <line x1="46" y1="52" x2="54" y2="52" stroke="#1F3A5F" stroke-width="3" stroke-linecap="round"/>
+      <path d="M 35 75 Q 25 80 25 95" stroke="#1F3A5F" stroke-width="3" fill="none" stroke-linecap="round"/>
+      <path d="M 65 75 Q 75 80 70 55" stroke="#1F3A5F" stroke-width="3" fill="none" stroke-linecap="round"/>
+    </g>
+  </g>
+
+  <!-- Arrow 1 -->
+  <path d="M 540 210 L 610 210" stroke="#E8742A" stroke-width="6" marker-end="url(#arrowhead)"/>
+
+  <!-- Scene 2: First Answer -->
+  <g id="scene-2">
+    <g transform="translate(600, 30) scale(3)">
+      <use href="#audit-base" />
+      <circle cx="41" cy="38" r="2.5" fill="#1F3A5F" />
+      <circle cx="65" cy="38" r="2.5" fill="#1F3A5F" />
+      <path d="M 46 52 Q 50 56 54 52" stroke="#1F3A5F" stroke-width="3" fill="none" stroke-linecap="round"/>
+      <path d="M 35 75 Q 25 80 25 95" stroke="#1F3A5F" stroke-width="3" fill="none" stroke-linecap="round"/>
+    </g>
+    <rect x="830" y="80" width="230" height="150" rx="10" fill="white" stroke="#1F3A5F" stroke-width="4"/>
+    <text x="945" y="140" font-size="40" font-weight="bold" fill="#1F3A5F" text-anchor="middle">Initial</text>
+    <text x="945" y="190" font-size="40" font-weight="bold" fill="#1F3A5F" text-anchor="middle">Answer</text>
+    <g transform="translate(600, 30) scale(3)">
+      <path d="M 65 75 L 80 50" stroke="#1F3A5F" stroke-width="3" fill="none" stroke-linecap="round"/>
+    </g>
+    <text x="860" y="410" font-size="52" font-weight="bold" fill="#222222" text-anchor="middle">Stage 1</text>
+  </g>
+
+  <!-- Arrow 2 -->
+  <path d="M 1090 210 L 1150 210" stroke="#E8742A" stroke-width="6" marker-end="url(#arrowhead)"/>
+
+  <!-- Scene 3: Self-Review -->
+  <g id="scene-3">
+    <!-- Highlight Background -->
+    <rect x="1110" y="10" width="720" height="400" rx="20" fill="#E8742A" fill-opacity="0.1"/>
+    
+    <!-- Mirror -->
+    <line x1="1340" y1="195" x2="1230" y2="130" stroke="#1F3A5F" stroke-width="8" stroke-linecap="round"/>
+    <ellipse cx="1220" cy="120" rx="90" ry="110" fill="white" stroke="#1F3A5F" stroke-width="6"/>
+    <path d="M 1160 60 A 60 80 0 0 1 1280 60" stroke="#F4F6F8" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <rect x="1145" y="80" width="150" height="80" rx="6" fill="#F4F6F8" stroke="#1F3A5F" stroke-width="3"/>
+    <text x="1220" y="115" font-size="28" font-weight="bold" fill="#1F3A5F" text-anchor="middle">Initial</text>
+    <text x="1220" y="145" font-size="28" font-weight="bold" fill="#1F3A5F" text-anchor="middle">Answer</text>
+
+    <!-- Audit Looking at Mirror -->
+    <g transform="translate(1330, 20) scale(3.5)">
+      <use href="#audit-base" />
+      <circle cx="35" cy="38" r="2.5" fill="#1F3A5F" />
+      <circle cx="59" cy="38" r="2.5" fill="#1F3A5F" />
+      <line x1="46" y1="52" x2="54" y2="52" stroke="#1F3A5F" stroke-width="3" stroke-linecap="round"/>
+      <path d="M 35 75 L 5 50" stroke="#1F3A5F" stroke-width="3" fill="none" stroke-linecap="round"/>
+      <!-- Right Arm holding card -->
+      <path d="M 65 75 L 80 50" stroke="#1F3A5F" stroke-width="3" fill="none" stroke-linecap="round"/>
+    </g>
+
+    <!-- Final Answer Card -->
+    <rect x="1590" y="100" width="230" height="120" rx="10" fill="white" stroke="#1F3A5F" stroke-width="4"/>
+    <text x="1705" y="150" font-size="40" font-weight="bold" fill="#1F3A5F" text-anchor="middle">Final</text>
+    <text x="1705" y="195" font-size="40" font-weight="bold" fill="#1F3A5F" text-anchor="middle">Answer</text>
+
+    <!-- Lock Icon -->
+    <g transform="translate(1140, 270)">
+      <rect x="0" y="24" width="36" height="28" rx="4" fill="#1F3A5F"/>
+      <path d="M 7 24 L 7 14 A 11 11 0 0 1 29 14 L 29 24" stroke="#1F3A5F" stroke-width="5" fill="none"/>
+      <circle cx="18" cy="38" r="4" fill="white"/>
+      <text x="50" y="28" font-size="36" fill="#222222" font-weight="bold">No hints.</text>
+      <text x="50" y="72" font-size="36" fill="#222222" font-weight="bold">No answer key.</text>
+    </g>
+    <text x="1500" y="410" font-size="52" font-weight="bold" fill="#222222" text-anchor="middle">Stage 2</text>
+  </g>
+
+  <!-- Arrow 3 Splitting -->
+  <g fill="none" stroke="#E8742A" stroke-width="5">
+    <path d="M 1830 160 L 1860 160" />
+    <path d="M 1860 160 C 1900 160, 1900 65, 1960 65" marker-end="url(#arrowhead)"/>
+    <path d="M 1860 160 C 1890 160, 1920 165, 1960 165" marker-end="url(#arrowhead)"/>
+    <path d="M 1860 160 C 1890 160, 1920 265, 1960 265" marker-end="url(#arrowhead)"/>
+    <path d="M 1860 160 C 1910 160, 1910 365, 1960 365" marker-end="url(#arrowhead)"/>
+  </g>
+
+  <!-- Scene 4: Four Outcomes -->
+  <g id="scene-4">
+    <!-- Fixed -->
+    <g transform="translate(2000, 20)">
+      <rect x="0" y="0" width="400" height="90" rx="10" fill="white" stroke="#1F3A5F" stroke-width="4"/>
+      <use href="#audit-head-happy" transform="translate(10, 0) scale(1.2)" />
+      <text x="110" y="58" font-size="40" font-weight="bold" fill="#222222">Fixed</text>
+      <text x="275" y="30" font-size="30" font-weight="bold" fill="#6B7280" text-anchor="middle">Initial</text>
+      <use href="#icon-cross" transform="translate(255, 35)" />
+      <path d="M 301 55 L 316 55" stroke="#1F3A5F" stroke-width="4" />
+      <polygon points="316,47 330,55 316,63" fill="#1F3A5F" />
+      <text x="360" y="30" font-size="30" font-weight="bold" fill="#6B7280" text-anchor="middle">Final</text>
+      <use href="#icon-check" transform="translate(340, 35)" />
+    </g>
+
+    <!-- Kept -->
+    <g transform="translate(2000, 120)">
+      <rect x="0" y="0" width="400" height="90" rx="10" fill="white" stroke="#1F3A5F" stroke-width="4"/>
+      <use href="#audit-head-happy" transform="translate(10, 0) scale(1.2)" />
+      <text x="110" y="58" font-size="40" font-weight="bold" fill="#222222">Kept</text>
+      <text x="275" y="30" font-size="30" font-weight="bold" fill="#6B7280" text-anchor="middle">Initial</text>
+      <use href="#icon-check" transform="translate(255, 35)" />
+      <path d="M 301 55 L 316 55" stroke="#1F3A5F" stroke-width="4" />
+      <polygon points="316,47 330,55 316,63" fill="#1F3A5F" />
+      <text x="360" y="30" font-size="30" font-weight="bold" fill="#6B7280" text-anchor="middle">Final</text>
+      <use href="#icon-check" transform="translate(340, 35)" />
+    </g>
+
+    <!-- Missed -->
+    <g transform="translate(2000, 220)">
+      <rect x="0" y="0" width="400" height="90" rx="10" fill="white" stroke="#1F3A5F" stroke-width="4"/>
+      <use href="#audit-head-worried" transform="translate(10, 0) scale(1.2)" />
+      <text x="110" y="58" font-size="40" font-weight="bold" fill="#222222">Missed</text>
+      <text x="275" y="30" font-size="30" font-weight="bold" fill="#6B7280" text-anchor="middle">Initial</text>
+      <use href="#icon-cross" transform="translate(255, 35)" />
+      <path d="M 301 55 L 316 55" stroke="#1F3A5F" stroke-width="4" />
+      <polygon points="316,47 330,55 316,63" fill="#1F3A5F" />
+      <text x="360" y="30" font-size="30" font-weight="bold" fill="#6B7280" text-anchor="middle">Final</text>
+      <use href="#icon-cross" transform="translate(340, 35)" />
+    </g>
+
+    <!-- Broken -->
+    <g transform="translate(2000, 320)">
+      <rect x="0" y="0" width="400" height="90" rx="10" fill="white" stroke="#1F3A5F" stroke-width="4"/>
+      <use href="#audit-head-worried" transform="translate(10, 0) scale(1.2)" />
+      <text x="110" y="58" font-size="40" font-weight="bold" fill="#222222">Broken</text>
+      <text x="275" y="30" font-size="30" font-weight="bold" fill="#6B7280" text-anchor="middle">Initial</text>
+      <use href="#icon-check" transform="translate(255, 35)" />
+      <path d="M 301 55 L 316 55" stroke="#1F3A5F" stroke-width="4" />
+      <polygon points="316,47 330,55 316,63" fill="#1F3A5F" />
+      <text x="360" y="30" font-size="30" font-weight="bold" fill="#6B7280" text-anchor="middle">Final</text>
+      <use href="#icon-cross" transform="translate(340, 35)" />
+    </g>
+  </g>
+</svg>

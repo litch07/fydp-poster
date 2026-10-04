@@ -1,0 +1,115 @@
+<svg width="1000" height="700" viewBox="0 0 1000 700" xmlns="http://www.w3.org/2000/svg" font-family="Calibri, Carlito, sans-serif">
+  <defs>
+    <!-- Base definitions to reuse -->
+    <g id="robot-base">
+      <line x1="50" y1="15" x2="50" y2="25" stroke="#1F3A5F" stroke-width="3" stroke-linecap="round"/>
+      <circle cx="50" cy="15" r="4" fill="#E8742A" stroke="none"/>
+      <rect x="25" y="25" width="50" height="40" rx="6" fill="#F4F6F8" stroke="#1F3A5F" stroke-width="3"/>
+      <circle cx="38" cy="38" r="6" fill="white" stroke="#1F3A5F" stroke-width="3"/>
+      <circle cx="62" cy="38" r="6" fill="white" stroke="#1F3A5F" stroke-width="3"/>
+      <rect x="35" y="65" width="30" height="35" rx="6" fill="#1F3A5F" stroke="none"/>
+    </g>
+  </defs>
+
+  <!-- Left Panel -->
+  <rect x="10" y="10" width="485" height="600" rx="6" fill="#F4F6F8" stroke="none" />
+  <text x="252.5" y="70" text-anchor="middle" font-size="40" font-weight="bold" fill="#1F3A5F" letter-spacing="1.5">Existing work</text>
+
+  <!-- Left Panel Dashed Lines -->
+  <line x1="252.5" y1="305" x2="100" y2="200" stroke="#1F3A5F" stroke-width="3" stroke-dasharray="6,6"/>
+  <line x1="252.5" y1="305" x2="405" y2="200" stroke="#1F3A5F" stroke-width="3" stroke-dasharray="6,6"/>
+  <line x1="252.5" y1="305" x2="100" y2="410" stroke="#1F3A5F" stroke-width="3" stroke-dasharray="6,6"/>
+  <line x1="252.5" y1="305" x2="405" y2="410" stroke="#1F3A5F" stroke-width="3" stroke-dasharray="6,6"/>
+
+  <!-- Left Panel Masking Circles -->
+  <circle cx="100" cy="200" r="24" fill="#F4F6F8" stroke="none" />
+  <circle cx="405" cy="200" r="24" fill="#F4F6F8" stroke="none" />
+  <circle cx="100" cy="410" r="24" fill="#F4F6F8" stroke="none" />
+  <circle cx="405" cy="410" r="24" fill="#F4F6F8" stroke="none" />
+
+  <!-- Left Panel Icons -->
+  <g transform="translate(80, 180)">
+    <!-- Wrench -->
+    <path d="M 20 10 A 10 10 0 1 1 30 20 L 25 15 Z" fill="none" stroke="#1F3A5F" stroke-width="3" stroke-linejoin="round"/>
+    <line x1="10" y1="30" x2="22" y2="18" stroke="#1F3A5F" stroke-width="5" stroke-linecap="round"/>
+  </g>
+
+  <g transform="translate(385, 180)">
+    <!-- Lightbulb -->
+    <circle cx="20" cy="15" r="12" stroke="#1F3A5F" stroke-width="3" fill="none"/>
+    <path d="M 14 25 L 14 30 L 26 30 L 26 25" stroke="#1F3A5F" stroke-width="3" fill="none"/>
+    <line x1="17" y1="34" x2="23" y2="34" stroke="#1F3A5F" stroke-width="3" stroke-linecap="round"/>
+    <line x1="20" y1="10" x2="20" y2="15" stroke="#1F3A5F" stroke-width="3" stroke-linecap="round"/>
+  </g>
+
+  <g transform="translate(80, 390)">
+    <!-- Map pin -->
+    <path d="M 5 15 A 15 15 0 1 1 35 15 Q 35 25 20 40 Q 5 25 5 15 Z" fill="none" stroke="#1F3A5F" stroke-width="3"/>
+    <circle cx="20" cy="15" r="5" fill="none" stroke="#1F3A5F" stroke-width="3"/>
+  </g>
+
+  <g transform="translate(375, 380) scale(0.6)">
+    <!-- Reviewer model (small robot) -->
+    <use href="#robot-base" />
+    <path d="M 35 75 L 25 85" stroke="#1F3A5F" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <path d="M 65 75 L 75 85" stroke="#1F3A5F" stroke-width="3" fill="none" stroke-linecap="round"/>
+  </g>
+
+  <!-- Left Panel Text -->
+  <text x="100" y="130" text-anchor="middle" font-size="28" fill="#222222">External</text>
+  <text x="100" y="165" text-anchor="middle" font-size="28" fill="#222222">tools</text>
+
+  <text x="405" y="150" text-anchor="middle" font-size="28" fill="#222222">Hints</text>
+
+  <text x="100" y="475" text-anchor="middle" font-size="28" fill="#222222">Error</text>
+  <text x="100" y="510" text-anchor="middle" font-size="28" fill="#222222">location</text>
+
+  <text x="405" y="475" text-anchor="middle" font-size="28" fill="#222222">Reviewer</text>
+  <text x="405" y="510" text-anchor="middle" font-size="28" fill="#222222">model</text>
+
+  <!-- Left Panel Central Audit -->
+  <g transform="translate(177.5, 230) scale(1.5)">
+    <use href="#robot-base" />
+    <circle cx="39" cy="38" r="3" fill="#1F3A5F" />
+    <circle cx="61" cy="38" r="3" fill="#1F3A5F" />
+    <line x1="45" y1="50" x2="55" y2="50" stroke="#1F3A5F" stroke-width="3" stroke-linecap="round"/>
+    <!-- Neutral arms -->
+    <path d="M 35 75 L 25 90" stroke="#1F3A5F" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <path d="M 65 75 L 75 90" stroke="#1F3A5F" stroke-width="3" fill="none" stroke-linecap="round"/>
+  </g>
+
+  <!-- Right Panel -->
+  <rect x="505" y="10" width="485" height="600" rx="6" fill="#E8742A" fill-opacity="0.1" stroke="none" />
+  <text x="747.5" y="70" text-anchor="middle" font-size="40" font-weight="bold" fill="#1F3A5F" letter-spacing="1.5">ReasonAudit</text>
+
+  <!-- Right Panel Mirror Audit -->
+  <g transform="translate(672.5, 230) scale(1.5)">
+    <use href="#robot-base" />
+    <circle cx="35" cy="38" r="2.5" fill="#1F3A5F" />
+    <circle cx="59" cy="38" r="2.5" fill="#1F3A5F" />
+    <line x1="46" y1="52" x2="54" y2="52" stroke="#1F3A5F" stroke-width="3" stroke-linecap="round"/>
+    <!-- Left arm holding mirror -->
+    <path d="M 35 75 L 15 65" stroke="#1F3A5F" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <!-- Right arm resting -->
+    <path d="M 65 75 Q 75 80 75 95" stroke="#1F3A5F" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <!-- Mirror handle -->
+    <line x1="15" y1="65" x2="5" y2="75" stroke="#1F3A5F" stroke-width="3" stroke-linecap="round"/>
+    <!-- Mirror head -->
+    <ellipse cx="18" cy="55" rx="8" ry="12" fill="#F4F6F8" stroke="#1F3A5F" stroke-width="3"/>
+    <!-- Reflection line -->
+    <path d="M 14 50 A 6 9 0 0 1 20 50" stroke="#1F3A5F" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.3"/>
+  </g>
+
+  <!-- Right Panel Lock Icon -->
+  <g transform="translate(727.5, 400)">
+    <rect x="5" y="15" width="30" height="25" rx="4" fill="none" stroke="#1F3A5F" stroke-width="3"/>
+    <path d="M 10 15 L 10 10 A 10 10 0 0 1 30 10 L 30 15" fill="none" stroke="#1F3A5F" stroke-width="3"/>
+    <circle cx="20" cy="27" r="3" fill="#1F3A5F"/>
+  </g>
+
+  <!-- Right Panel Text -->
+  <text x="747.5" y="500" text-anchor="middle" font-size="32" font-weight="bold" fill="#1F3A5F">Unaided self-review</text>
+
+  <!-- Bottom Line Text -->
+  <text x="500" y="665" text-anchor="middle" font-size="28" font-weight="bold" fill="#1F3A5F">Natural errors · Three domains · Correction + Damage Rate</text>
+</svg>

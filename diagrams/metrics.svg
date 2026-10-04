@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 800" font-family="Calibri, Carlito, sans-serif">
+    <defs>
+        <g id="card-red">
+            <rect x="-20" y="-30" width="40" height="60" rx="4" fill="white" stroke="#1F3A5F" stroke-width="2"/>
+            <line x1="-10" y1="-10" x2="10" y2="10" stroke="#C0504D" stroke-width="4" stroke-linecap="round"/>
+            <line x1="10" y1="-10" x2="-10" y2="10" stroke="#C0504D" stroke-width="4" stroke-linecap="round"/>
+        </g>
+        <g id="card-green">
+            <rect x="-20" y="-30" width="40" height="60" rx="4" fill="white" stroke="#1F3A5F" stroke-width="2"/>
+            <path d="M -12,1 L -3,10 L 12,-9" stroke="#3E8E6B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+        </g>
+        <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+            <path d="M 0 1 L 10 5 L 0 9 z" fill="#E8742A" />
+        </marker>
+    </defs>
+
+    <!-- Top Panel: Correction Rate -->
+    <rect x="20" y="20" width="460" height="360" rx="6" fill="#F4F6F8" />
+    <text x="250" y="70" fill="#E8742A" font-size="36" font-weight="bold" text-anchor="middle">Correction Rate</text>
+    
+    <!-- Row 1: 3 wrong, 2 correct -->
+    <use href="#card-red" x="130" y="130" />
+    <use href="#card-red" x="190" y="130" />
+    <use href="#card-red" x="250" y="130" />
+    <use href="#card-green" x="310" y="130" />
+    <use href="#card-green" x="370" y="130" />
+
+    <!-- Arrow down -->
+    <line x1="250" y1="180" x2="250" y2="210" stroke="#E8742A" stroke-width="4" marker-end="url(#arrow)"/>
+
+    <!-- Row 2: 2 of the red crosses became green checks -->
+    <use href="#card-green" x="130" y="260" />
+    <use href="#card-green" x="190" y="260" />
+    <use href="#card-red" x="250" y="260" />
+    <use href="#card-green" x="310" y="260" />
+    <use href="#card-green" x="370" y="260" />
+
+    <text x="250" y="340" fill="#1F3A5F" font-size="36" font-weight="bold" text-anchor="middle">WC / (WC + WW)</text>
+
+    <!-- Bottom Panel: Damage Rate -->
+    <rect x="20" y="400" width="460" height="360" rx="6" fill="#F4F6F8" />
+    <text x="250" y="450" fill="#E8742A" font-size="36" font-weight="bold" text-anchor="middle">Damage Rate</text>
+    
+    <!-- Row 1: 5 correct -->
+    <use href="#card-green" x="130" y="510" />
+    <use href="#card-green" x="190" y="510" />
+    <use href="#card-green" x="250" y="510" />
+    <use href="#card-green" x="310" y="510" />
+    <use href="#card-green" x="370" y="510" />
+
+    <!-- Arrow down -->
+    <line x1="250" y1="560" x2="250" y2="590" stroke="#E8742A" stroke-width="4" marker-end="url(#arrow)"/>
+
+    <!-- Row 2: 1 green check became red cross -->
+    <use href="#card-green" x="130" y="640" />
+    <use href="#card-green" x="190" y="640" />
+    <use href="#card-red" x="250" y="640" />
+    <use href="#card-green" x="310" y="640" />
+    <use href="#card-green" x="370" y="640" />
+
+    <text x="250" y="720" fill="#1F3A5F" font-size="36" font-weight="bold" text-anchor="middle">CW / (CC + CW)</text>
+</svg>

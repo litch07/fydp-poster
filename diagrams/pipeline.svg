@@ -1,0 +1,132 @@
+<svg width="3200" height="600" viewBox="0 0 3200 600" xmlns="http://www.w3.org/2000/svg" font-family="Calibri, Carlito, sans-serif">
+  <defs>
+    <!-- Arrowhead -->
+    <marker id="arrowhead" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
+      <polygon points="0 0, 6 3, 0 6" fill="#E8742A" />
+    </marker>
+
+    <!-- Robot Base Shapes -->
+    <g id="robot-base">
+      <line x1="50" y1="15" x2="50" y2="25" stroke="#1F3A5F" stroke-width="3" stroke-linecap="round"/>
+      <circle cx="50" cy="15" r="4" fill="#E8742A" stroke="none"/>
+      <rect x="25" y="25" width="50" height="40" rx="6" fill="#F4F6F8" stroke="#1F3A5F" stroke-width="3"/>
+      <circle cx="38" cy="38" r="6" fill="white" stroke="#1F3A5F" stroke-width="3"/>
+      <circle cx="62" cy="38" r="6" fill="white" stroke="#1F3A5F" stroke-width="3"/>
+      <rect x="35" y="65" width="30" height="35" rx="6" fill="#1F3A5F" stroke="none"/>
+    </g>
+
+    <g id="audit-thinking">
+      <use href="#robot-base" />
+      <circle cx="40" cy="36" r="2.5" fill="#1F3A5F" />
+      <circle cx="64" cy="36" r="2.5" fill="#1F3A5F" />
+      <line x1="46" y1="52" x2="54" y2="52" stroke="#1F3A5F" stroke-width="3" stroke-linecap="round"/>
+      <path d="M 35 75 Q 25 80 25 95" stroke="#1F3A5F" stroke-width="3" fill="none" stroke-linecap="round"/>
+      <path d="M 65 75 Q 75 80 70 55" stroke="#1F3A5F" stroke-width="3" fill="none" stroke-linecap="round"/>
+    </g>
+
+    <g id="audit-mirror">
+      <use href="#robot-base" />
+      <circle cx="35" cy="38" r="2.5" fill="#1F3A5F" />
+      <circle cx="59" cy="38" r="2.5" fill="#1F3A5F" />
+      <line x1="46" y1="52" x2="54" y2="52" stroke="#1F3A5F" stroke-width="3" stroke-linecap="round"/>
+      <path d="M 35 75 L 15 65" stroke="#1F3A5F" stroke-width="3" fill="none" stroke-linecap="round"/>
+      <path d="M 65 75 Q 75 80 75 95" stroke="#1F3A5F" stroke-width="3" fill="none" stroke-linecap="round"/>
+      <line x1="15" y1="65" x2="5" y2="75" stroke="#1F3A5F" stroke-width="3" stroke-linecap="round"/>
+      <ellipse cx="18" cy="55" rx="8" ry="12" fill="#F4F6F8" stroke="#1F3A5F" stroke-width="3"/>
+      <path d="M 14 50 A 6 9 0 0 1 20 50" stroke="#1F3A5F" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.3"/>
+    </g>
+  </defs>
+
+  <!-- Connective Arrows -->
+  <!-- 1 to 2 -->
+  <line x1="420" y1="250" x2="495" y2="250" stroke="#E8742A" stroke-width="4" marker-end="url(#arrowhead)"/>
+  <!-- 2 to 3 -->
+  <line x1="860" y1="250" x2="935" y2="250" stroke="#E8742A" stroke-width="4" marker-end="url(#arrowhead)"/>
+  <!-- 3 to 4 -->
+  <line x1="1300" y1="250" x2="1375" y2="250" stroke="#E8742A" stroke-width="4" marker-end="url(#arrowhead)"/>
+  
+  <!-- 4 to 5 Split -->
+  <path d="M 1740 250 H 1765 Q 1780 250 1780 235 V 135 Q 1780 120 1795 120 H 1815" fill="none" stroke="#E8742A" stroke-width="4" marker-end="url(#arrowhead)"/>
+  <path d="M 1740 250 H 1765 Q 1780 250 1780 265 V 365 Q 1780 380 1795 380 H 1815" fill="none" stroke="#E8742A" stroke-width="4" marker-end="url(#arrowhead)"/>
+  
+  <!-- 5 to 6 Merge -->
+  <path d="M 2180 120 H 2205 Q 2220 120 2220 135 V 235 Q 2220 250 2235 250 H 2255" fill="none" stroke="#E8742A" stroke-width="4" marker-end="url(#arrowhead)"/>
+  <path d="M 2180 380 H 2205 Q 2220 380 2220 365 V 265 Q 2220 250 2235 250 H 2240" fill="none" stroke="#E8742A" stroke-width="4"/>
+  
+  <!-- 6 to 7 -->
+  <line x1="2620" y1="250" x2="2695" y2="250" stroke="#E8742A" stroke-width="4" marker-end="url(#arrowhead)"/>
+
+  <!-- Node 1: Question Bank -->
+  <rect x="60" y="160" width="360" height="180" rx="6" fill="#F4F6F8" stroke="#1F3A5F" stroke-width="3"/>
+  <g transform="translate(85, 210)">
+    <rect x="10" y="0" width="50" height="60" rx="4" fill="none" stroke="#1F3A5F" stroke-width="3"/>
+    <rect x="5" y="5" width="50" height="60" rx="4" fill="#F4F6F8" stroke="#1F3A5F" stroke-width="3"/>
+    <rect x="0" y="10" width="50" height="60" rx="4" fill="white" stroke="#1F3A5F" stroke-width="3"/>
+    <line x1="10" y1="30" x2="40" y2="30" stroke="#1F3A5F" stroke-width="3" stroke-linecap="round"/>
+    <line x1="10" y1="45" x2="30" y2="45" stroke="#1F3A5F" stroke-width="3" stroke-linecap="round"/>
+  </g>
+  <text x="280" y="240" font-size="36" font-weight="bold" fill="#1F3A5F" text-anchor="middle">Question</text>
+  <text x="280" y="285" font-size="36" font-weight="bold" fill="#1F3A5F" text-anchor="middle">Bank</text>
+
+  <!-- Node 2: Stage 1 -->
+  <rect x="500" y="160" width="360" height="180" rx="6" fill="#F4F6F8" stroke="#1F3A5F" stroke-width="3"/>
+  <g transform="translate(530, 210) scale(1.0)">
+    <use href="#audit-thinking" />
+  </g>
+  <text x="740" y="225" font-size="32" font-weight="bold" fill="#1F3A5F" text-anchor="middle">Stage 1:</text>
+  <text x="740" y="265" font-size="32" font-weight="bold" fill="#1F3A5F" text-anchor="middle">Initial answer</text>
+  <text x="740" y="315" font-size="28" fill="#6B7280" text-anchor="middle">no hints</text>
+  <!-- Lock icon for 'no hints' -->
+  <g transform="translate(805, 295)">
+    <rect x="4" y="8" width="16" height="12" rx="2" fill="none" stroke="#1F3A5F" stroke-width="2"/>
+    <path d="M 7 8 V 5 A 5 5 0 0 1 17 5 V 8" fill="none" stroke="#1F3A5F" stroke-width="2"/>
+  </g>
+
+  <!-- Node 3: Stage 2 -->
+  <rect x="940" y="160" width="360" height="180" rx="6" fill="#FDEFE5" stroke="#1F3A5F" stroke-width="3"/>
+  <g transform="translate(970, 210) scale(1.0)">
+    <use href="#audit-mirror" />
+  </g>
+  <text x="1170" y="225" font-size="32" font-weight="bold" fill="#1F3A5F" text-anchor="middle">Stage 2:</text>
+  <text x="1170" y="265" font-size="32" font-weight="bold" fill="#1F3A5F" text-anchor="middle">Self-review</text>
+  <text x="1170" y="315" font-size="28" fill="#6B7280" text-anchor="middle">fixed prompt</text>
+
+  <!-- Node 4: Final answer -->
+  <rect x="1380" y="160" width="360" height="180" rx="6" fill="#F4F6F8" stroke="#1F3A5F" stroke-width="3"/>
+  <g transform="translate(1420, 220)">
+    <rect x="0" y="0" width="45" height="60" rx="4" fill="white" stroke="#1F3A5F" stroke-width="4"/>
+    <path d="M 10 30 L 20 40 L 35 15" fill="none" stroke="#3E8E6B" stroke-width="4" stroke-linecap="round"/>
+  </g>
+  <text x="1605" y="260" font-size="36" font-weight="bold" fill="#1F3A5F" text-anchor="middle">Final answer</text>
+
+  <!-- Node 5: Split boxes -->
+  <rect x="1820" y="50" width="360" height="140" rx="6" fill="#F4F6F8" stroke="#1F3A5F" stroke-width="3"/>
+  <text x="2000" y="115" font-size="32" font-weight="bold" fill="#1F3A5F" text-anchor="middle">Numeric / MC</text>
+  <text x="2000" y="155" font-size="28" fill="#6B7280" text-anchor="middle">auto-graded</text>
+
+  <rect x="1820" y="310" width="360" height="140" rx="6" fill="#F4F6F8" stroke="#1F3A5F" stroke-width="3"/>
+  <text x="2000" y="375" font-size="32" font-weight="bold" fill="#1F3A5F" text-anchor="middle">Open-ended</text>
+  <text x="2000" y="415" font-size="28" fill="#6B7280" text-anchor="middle">manual grading</text>
+
+  <!-- Node 6: Outcome bucket -->
+  <rect x="2260" y="160" width="360" height="180" rx="6" fill="#F4F6F8" stroke="#1F3A5F" stroke-width="3"/>
+  <g transform="translate(2310, 235)">
+    <circle cx="0" cy="0" r="9" fill="#3E8E6B" />
+    <circle cx="25" cy="0" r="9" fill="#C0504D" />
+    <circle cx="0" cy="25" r="9" fill="#3E8E6B" />
+    <circle cx="25" cy="25" r="9" fill="#C0504D" />
+  </g>
+  <text x="2485" y="240" font-size="36" font-weight="bold" fill="#1F3A5F" text-anchor="middle">Outcome</text>
+  <text x="2485" y="285" font-size="36" font-weight="bold" fill="#1F3A5F" text-anchor="middle">bucket</text>
+
+  <!-- Node 7: Metrics -->
+  <rect x="2700" y="160" width="360" height="180" rx="6" fill="#F4F6F8" stroke="#1F3A5F" stroke-width="3"/>
+  <g transform="translate(2750, 220)">
+    <line x1="0" y1="60" x2="60" y2="60" stroke="#1F3A5F" stroke-width="4" stroke-linecap="round"/>
+    <rect x="5" y="25" width="12" height="35" fill="#E8742A" stroke="#1F3A5F" stroke-width="3"/>
+    <rect x="22" y="5" width="12" height="55" fill="#1F3A5F" stroke="#1F3A5F" stroke-width="3"/>
+    <rect x="39" y="35" width="12" height="25" fill="#F4F6F8" stroke="#1F3A5F" stroke-width="3"/>
+  </g>
+  <text x="2935" y="260" font-size="36" font-weight="bold" fill="#1F3A5F" text-anchor="middle">Metrics</text>
+
+</svg>

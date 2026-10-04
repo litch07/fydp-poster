@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600">
+    <defs>
+        <marker id="arrowhead" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
+            <polygon points="0 0, 6 3, 0 6" fill="#E8742A" />
+        </marker>
+        <style>
+            text { font-family: 'Calibri', 'Carlito', sans-serif; }
+        </style>
+    </defs>
+
+    <!-- Top row background tint -->
+    <rect x="37.5" y="50" width="825" height="170" rx="10" fill="#F4F6F8" />
+    
+    <!-- Top row chips -->
+    <rect x="67.5" y="75" width="240" height="120" rx="6" fill="#FFFFFF" stroke="#1F3A5F" stroke-width="3" />
+    <rect x="330" y="75" width="240" height="120" rx="6" fill="#FFFFFF" stroke="#1F3A5F" stroke-width="3" />
+    <rect x="592.5" y="75" width="240" height="120" rx="6" fill="#FFFFFF" stroke="#1F3A5F" stroke-width="3" />
+
+    <!-- Top row icons -->
+    <!-- Mathematics -->
+    <path d="M177.5 105 L197.5 105 M187.5 95 L187.5 115 M177.5 123 L197.5 123" stroke="#1F3A5F" stroke-width="3" stroke-linecap="round" fill="none" />
+    <!-- Formal Logic -->
+    <path d="M435 110 L445 110 M445 110 L452 98 L465 98 M445 110 L452 122 L465 122 M458 93 L465 98 L458 103 M458 117 L465 122 L458 127" stroke="#1F3A5F" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+    <!-- Commonsense -->
+    <path d="M706.5 102 A6 6 0 1 1 718.5 102 C718.5 107 715.5 109 715.5 113 L709.5 113 C709.5 109 706.5 107 706.5 102 Z" stroke="#1F3A5F" stroke-width="3" stroke-linecap="round" fill="none" />
+    <path d="M710.5 117 L714.5 117 M710.5 121 L714.5 121 M712.5 85 L712.5 90 M696.5 102 L701.5 102 M723.5 102 L728.5 102 M701.5 91 L705.5 95 M723.5 91 L719.5 95" stroke="#1F3A5F" stroke-width="3" stroke-linecap="round" fill="none" />
+
+    <!-- Top row labels -->
+    <text x="187.5" y="170" font-size="34" fill="#1F3A5F" text-anchor="middle">Mathematics</text>
+    <text x="450" y="170" font-size="34" fill="#1F3A5F" text-anchor="middle">Formal Logic</text>
+    <text x="712.5" y="170" font-size="34" fill="#1F3A5F" text-anchor="middle">Commonsense</text>
+
+    <!-- Connecting arrow -->
+    <line x1="450" y1="230" x2="450" y2="315" stroke="#E8742A" stroke-width="3" marker-end="url(#arrowhead)" />
+    <text x="465" y="280" font-size="34" fill="#1F3A5F" text-anchor="start">each question tagged yes / no</text>
+
+    <!-- Heading -->
+    <text x="450" y="355" font-size="34" font-weight="bold" fill="#1F3A5F" text-anchor="middle">Difficulty modifiers</text>
+
+    <!-- Bottom row chips -->
+    <rect x="37.5" y="380" width="195" height="140" rx="6" fill="#FFFFFF" stroke="#1F3A5F" stroke-width="3" />
+    <rect x="247.5" y="380" width="195" height="140" rx="6" fill="#FFFFFF" stroke="#1F3A5F" stroke-width="3" />
+    <rect x="457.5" y="380" width="195" height="140" rx="6" fill="#FFFFFF" stroke="#1F3A5F" stroke-width="3" />
+    <rect x="667.5" y="380" width="195" height="140" rx="6" fill="#FFFFFF" stroke="#1F3A5F" stroke-width="3" />
+
+    <!-- Bottom row icons -->
+    <!-- Ambiguity -->
+    <path d="M115 420 A12 12 0 0 1 125 405 A16 16 0 0 1 145 405 A12 12 0 0 1 155 420 Z" stroke="#1F3A5F" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+    <path d="M132 407 A3.5 3.5 0 1 1 138 409 C138 412 135 412 135 415 M135 419 L135 420" stroke="#1F3A5F" stroke-width="2.5" stroke-linecap="round" fill="none" />
+
+    <!-- Missing information -->
+    <path d="M330 400 L340 400 A5 5 0 1 1 350 400 L360 400 L360 410 A5 5 0 1 0 360 420 L360 430 L350 430 A5 5 0 1 1 340 430 L330 430 L330 420 A5 5 0 1 0 330 410 Z" stroke="#1F3A5F" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+
+    <!-- Contradiction -->
+    <path d="M535 405 L575 405 M565 395 L575 405 L565 415 M575 425 L535 425 M545 415 L535 425 L545 435" stroke="#1F3A5F" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+
+    <!-- Distracting information -->
+    <circle cx="755" cy="400" r="3" fill="#1F3A5F" />
+    <circle cx="770" cy="395" r="2.5" fill="#1F3A5F" />
+    <circle cx="745" cy="420" r="4" fill="#1F3A5F" />
+    <circle cx="775" cy="410" r="3.5" fill="#1F3A5F" />
+    <circle cx="765" cy="430" r="2" fill="#1F3A5F" />
+    <circle cx="755" cy="415" r="2.5" fill="#1F3A5F" />
+    <circle cx="782" cy="425" r="3" fill="#1F3A5F" />
+
+    <!-- Bottom row labels -->
+    <text x="135" y="490" font-size="34" fill="#1F3A5F" text-anchor="middle">Ambiguity</text>
+    
+    <text x="345" y="475" font-size="34" fill="#1F3A5F" text-anchor="middle">Missing</text>
+    <text x="345" y="505" font-size="34" fill="#1F3A5F" text-anchor="middle">information</text>
+    
+    <text x="555" y="490" font-size="34" fill="#1F3A5F" text-anchor="middle">Contradiction</text>
+    
+    <text x="765" y="475" font-size="34" fill="#1F3A5F" text-anchor="middle">Distracting</text>
+    <text x="765" y="505" font-size="34" fill="#1F3A5F" text-anchor="middle">information</text>
+</svg>
