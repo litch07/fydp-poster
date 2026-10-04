@@ -26,19 +26,17 @@ Audit is defined once in diagrams/audit.svg (create it first, as a reusable grou
 ## Poster layout: CARD (BENTO) SYSTEM (replaces all earlier layout text)
 
 ### Canvas
-A0 portrait 841 x 1189 mm. Margin 30 mm. Gap between all cards, horizontal and vertical: 6 mm. Content area 781 x 1129 mm.
+A0 portrait 841 x 1189 mm. Margin 30 mm. Gap between cards 12 mm. Content area 781 x 1129 mm.
 
 ### Exact card sizes (width x height, mm). Do not change them.
-HEADER: 781 x 180
+HEADER: 781 x 150
 HERO: 781 x 180
-ROW A (height 150): Motivation 387.5 | Objectives 387.5
+ROW A (height 150): Motivation 384.5 | Objectives 384.5
 ROW B (height 150): Methodology 781
-ROW C (height 198): Dataset 274 | Outcome Buckets 244 | Metrics 251
-ROW D (height 135): Research Gap 403 | Pilot System 372
-ROW E (height 100): Status and Next Steps 387.5 | References 387.5
-Check: heights 180+180+150+150+198+135+100 = 1093, plus 6 gaps of 6 = 1129. Widths: Row A 387.5+387.5+6 = 781, Row C 274+244+251+12 = 781, Row D 403+372+6 = 781, Row E 387.5+387.5+6 = 781. Cards tile the area exactly, with no gap at the bottom.
-Diagram inner sizes (card minus 24 padding): hero 757, pipeline 757, dataset 250, outcomes 220, metrics 227, gap 379 (wide). Heights stay as before; any extra card height goes into strip padding.
-Gap between inner strips inside a card: 4 mm.
+ROW C (height 192): Dataset 270 | Outcome Buckets 240 | Metrics 247
+ROW D (height 135): Research Gap 400 | Pilot System 369
+ROW E (height 100): Status and Next Steps 384.5 | References 384.5
+Check: 150+180+150+150+192+135+100 = 1057, plus 6 gaps of 12 = 1129. Cards tile the area exactly, with no gap at the bottom.
 
 ### Shape system (the only shapes)
 - Card: rounded rectangle, radius 12, filled, no outline, no shadow. Padding 12.
@@ -48,17 +46,10 @@ Gap between inner strips inside a card: 4 mm.
 - No outlines, no rotated text anywhere (no vertical text).
 
 ### Type sizes
-Title 80pt bold (2 lines), authors 24-32pt (one per row), hero headline 56pt bold (ONE line), tab titles 52pt bold, body 24pt (increase to 28pt only where a card has room), diagram labels 24pt minimum, references and captions 20pt minimum. One body size across all cards.
+Title 80pt bold (2 lines), authors 36pt, hero headline 56pt bold (ONE line), tab titles 52pt bold, body 24pt (increase to 28pt only where a card has room), diagram labels 24pt minimum, references and captions 20pt minimum. One body size across all cards.
 
 ### Block contents (use the exact text from the CONTENT section, never shorten or reword)
-HEADER (781 x 180, navy fill, padding 12, three columns with 12 mm gaps):
-- Left column (55 mm wide): white rounded logo tile 55 x 55 (labeled placeholder if the logo is missing), top-aligned.
-- Center column (about 478 mm wide), stacked top to bottom with 6 mm gaps:
-  1. Team pill: orange #E8742A rounded pill, white bold 28pt text "Team: The Night's Watch".
-  2. Title in white bold, 2 lines. Use the largest size between 56pt and 72pt where both lines fit with no wrap to a third line.
-  3. Department line in white 24pt.
-  4. Three equal faculty tiles in a row (light navy #E8EDF3 fill, 6 mm gaps): role in orange 20pt, then name and title in navy 24pt (wrap to two lines).
-- Right column (200 mm wide): ONE light navy #E8EDF3 rounded panel, full inner height, containing the five authors, ONE PER ROW, evenly distributed vertically, same left edge. Each row is a single line: name in navy bold, ID in orange, in the form "Md. Assaduzzaman Nur (0112230442)". Use the largest font between 24pt and 32pt at which the longest row fits on one line with 6 mm side padding. No wrapping, no extra label.
+HEADER: logo tile (white, left, labeled placeholder), title, authors, department line, then three equal faculty tiles (light navy fill; role in orange 20pt above name in navy 24pt).
 HERO: headline, hero diagram filling the full inner width (757 mm wide), caption.
 MOTIVATION / OBJECTIVES: 4 strips each.
 METHODOLOGY: pipeline diagram (horizontal, full inner width). A bottom strip contains the dashed "Controls: neutral review · independent second attempt" chip on the left and the 4 model chips with the label "Models" on the right.
@@ -83,16 +74,10 @@ REFERENCES: one white inner shape, two text columns, 20pt.
 
 HEADER
 Left: UIU logo (assets/uiu-logo.png; if missing, a labeled placeholder box)
-Team pill: Team: The Night's Watch
 Title: ReasonAudit: Evaluating Error Awareness and Self-Correction in Large Language Models
-Authors, one per row:
-Md. Assaduzzaman Nur (0112230442)
-Shahriar Yasin (0112230638)
-Shakib Ahmed (0112230421)
-Sadid Ahmed (0112330154)
-Rukan Mia (0112231036)
-Department line: Department of Computer Science and Engineering, United International University
-Faculty tiles:
+Authors: Md. Assaduzzaman Nur · Shahriar Yasin · Shakib Ahmed · Sadid Ahmed · Rukan Mia
+Under authors: Department of Computer Science and Engineering, United International University
+Top-right, small, no boxes:
 Supervisor: Sadia Islam, Assistant Professor
 Co-Supervisor: Mr. Nahid Hossain, Assistant Professor
 Course Teacher: Dr. Riasat Azim, Associate Professor

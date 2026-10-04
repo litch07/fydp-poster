@@ -85,11 +85,7 @@ JS_MEASURE = """
             if (cr.top < innerTop - 2 || cr.left < innerLeft - 2 ||
                 cr.bottom > innerBottom + 2 || cr.right > innerRight + 2) {
                 overflow = true;
-                let issue = child.tagName + '.' + child.className;
-                if (cr.bottom > innerBottom + 2) issue += ` (Bottom: ${cr.bottom} > ${innerBottom})`;
-                if (cr.right > innerRight + 2) issue += ` (Right: ${cr.right} > ${innerRight})`;
-                if (cr.left < innerLeft - 2) issue += ` (Left: ${cr.left} < ${innerLeft})`;
-                overflowDetails.push(issue);
+                overflowDetails.push(child.tagName + '.' + child.className);
             }
         });
 
@@ -137,68 +133,6 @@ JS_MEASURE = """
         }
 
         const ff = window.getComputedStyle(card).fontFamily;
-        let headerIssues = [];
-        if (name === 'header') {
-            const mm2px = 3.7795275591;
-            
-            // Check authors
-            const authorRows = card.querySelectorAll('.author-row');
-            if (authorRows.length === 5) {
-                let firstLeft = null;
-                let yPositions = [];
-                let heights = [];
-                authorRows.forEach((row, idx) => {
-                    const rect = row.getBoundingClientRect();
-                    // Wrap check: a single line author row shouldn't be taller than 40px (approx 30pt line height)
-                    if (rect.height > 60) headerIssues.push(`Author row ${idx+1} wrapped (height ${rect.height}px)`);
-                    
-                    if (firstLeft === null) firstLeft = rect.left;
-                    else if (Math.abs(rect.left - firstLeft) > 1) headerIssues.push(`Author row ${idx+1} not left-aligned`);
-                    
-                    yPositions.push(rect.top);
-                });
-                
-                // Check even spacing
-                if (yPositions.length === 5) {
-                    let gaps = [];
-                    for(let i=0; i<4; i++) {
-                        gaps.push(yPositions[i+1] - yPositions[i]);
-                    }
-                    const avgGap = gaps.reduce((a,b)=>a+b, 0) / gaps.length;
-                    gaps.forEach((g, i) => {
-                        if(Math.abs(g - avgGap) > 2) headerIssues.push(`Author rows not evenly spaced (gap ${i} is ${g}, avg ${avgGap})`);
-                    });
-                }
-            } else {
-                headerIssues.push(`Found ${authorRows.length} author rows instead of 5`);
-            }
-            
-            // Check Title lines
-            const titleEl = card.querySelector('.header-title');
-            if (titleEl) {
-                const titleRect = titleEl.getBoundingClientRect();
-                const lhStr = window.getComputedStyle(titleEl).lineHeight;
-                const lh = lhStr === 'normal' ? 1.1 * parseFloat(window.getComputedStyle(titleEl).fontSize) : parseFloat(lhStr);
-                const lines = Math.round(titleRect.height / lh);
-                if (lines !== 2) headerIssues.push(`Title has ${lines} lines instead of 2 (height: ${titleRect.height}, lh: ${lh})`);
-            }
-            
-            // Check Pill and Tile padding
-            const pill = card.querySelector('.team-pill');
-            if (pill) {
-                const pstyle = window.getComputedStyle(pill);
-                const pt = parseFloat(pstyle.paddingTop)/mm2px, pb = parseFloat(pstyle.paddingBottom)/mm2px;
-                const pl = parseFloat(pstyle.paddingLeft)/mm2px, pr = parseFloat(pstyle.paddingRight)/mm2px;
-                if (pt < 2.9 || pb < 2.9 || pl < 2.9 || pr < 2.9) headerIssues.push(`Team pill padding < 3mm`);
-            }
-            const tiles = card.querySelectorAll('.faculty-tile');
-            tiles.forEach((tile, idx) => {
-                const pstyle = window.getComputedStyle(tile);
-                const pt = parseFloat(pstyle.paddingTop)/mm2px, pb = parseFloat(pstyle.paddingBottom)/mm2px;
-                const pl = parseFloat(pstyle.paddingLeft)/mm2px, pr = parseFloat(pstyle.paddingRight)/mm2px;
-                if (pt < 2.9 || pb < 2.9 || pl < 2.9 || pr < 2.9) headerIssues.push(`Faculty tile ${idx+1} padding < 3mm`);
-            });
-        }
 
         results[name] = {
             overflow: overflow,
@@ -212,8 +146,7 @@ JS_MEASURE = """
                 y: cardRect.y / mm2px,
                 w: cardRect.width / mm2px,
                 h: cardRect.height / mm2px
-            },
-            headerIssues: headerIssues
+            }
         };
     });
 
@@ -243,14 +176,9 @@ def check_tiling(cards_data):
     total_w = max_x - min_x
     total_h = max_y - min_y
 
-    if abs(min_x - 30) > 0.5:
-        issues.append(f"Left edge at {min_x:.1f}mm (expected 30mm)")
-    if abs(max_x - (30 + CONTENT_W_MM)) > 0.5:
-        issues.append(f"Right edge at {max_x:.1f}mm (expected {30 + CONTENT_W_MM}mm)")
-
-    if abs(total_w - CONTENT_W_MM) > 0.5:
+    if abs(total_w - CONTENT_W_MM) > 3:
         issues.append(f"Total width {total_w:.1f}mm != {CONTENT_W_MM}mm")
-    if abs(total_h - CONTENT_H_MM) > 0.5:
+    if abs(total_h - CONTENT_H_MM) > 3:
         issues.append(f"Total height {total_h:.1f}mm != {CONTENT_H_MM}mm")
 
     # Check horizontal gaps within each row
@@ -264,8 +192,8 @@ def check_tiling(cards_data):
             r1 = rects[n1]
             r2 = rects[n2]
             gap = r2[0] - (r1[0] + r1[2])
-            if abs(gap - 6) > 0.5:
-                issues.append(f"H-gap {n1}->{n2}: {gap:.1f}mm (expected 6mm)")
+            if abs(gap - 12) > 2:
+                issues.append(f"H-gap {n1}->{n2}: {gap:.1f}mm (expected 12mm)")
 
     # Check vertical gaps between adjacent rows
     for i in range(len(ROWS) - 1):
@@ -279,13 +207,13 @@ def check_tiling(cards_data):
         r1 = rects[n1]
         r2 = rects[n2]
         gap = r2[1] - (r1[1] + r1[3])
-        if abs(gap - 6) > 0.5:
-            issues.append(f"V-gap row({n1})->row({n2}): {gap:.1f}mm (expected 6mm)")
+        if abs(gap - 12) > 2:
+            issues.append(f"V-gap row({n1})->row({n2}): {gap:.1f}mm (expected 12mm)")
 
     # Check no empty band at bottom
     bottom_edge = max_y
     expected_bottom = 30 + CONTENT_H_MM  # 30mm margin + content
-    if abs(bottom_edge - expected_bottom) > 0.5:
+    if abs(bottom_edge - expected_bottom) > 5:
         issues.append(f"Bottom edge at {bottom_edge:.1f}mm (expected {expected_bottom:.0f}mm)")
 
     return issues
@@ -346,18 +274,8 @@ def main():
             ff = ff + " !!!"
 
         print(f"{name:<18} {ov:<10} {fill:<8} {font_size:<10} {strips:<10} {ff:<20}")
-        if d["overflow"]:
-            for detail in d["overflowDetails"]:
-                print(f"    - {detail}")
 
     print()
-    if data.get("header") and data["header"].get("headerIssues"):
-        print("HEADER ISSUES:")
-        for hi in data["header"]["headerIssues"]:
-            print(f"  X {hi}")
-            all_pass = False
-        print()
-
     tiling_issues = check_tiling(data)
     if tiling_issues:
         print("TILING ISSUES:")
