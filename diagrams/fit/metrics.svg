@@ -1,4 +1,4 @@
-<svg width="223" height="70" viewBox="0 0 223 70" xmlns="http://www.w3.org/2000/svg" font-family="Carlito, sans-serif">
+﻿<svg width="227" height="46" viewBox="0 0 227 46" xmlns="http://www.w3.org/2000/svg" font-family="Carlito, sans-serif">
   <defs>
     <g id="card-green">
       <rect x="0" y="0" width="9" height="11" rx="1.5" fill="white" stroke="#1F3A5F" stroke-width="1"/>
@@ -8,62 +8,41 @@
       <rect x="0" y="0" width="9" height="11" rx="1.5" fill="white" stroke="#1F3A5F" stroke-width="1"/>
       <path d="M 2.5 3 L 6.5 8 M 6.5 3 L 2.5 8" stroke="#C0504D" stroke-width="1.5" fill="none"/>
     </g>
-    <g id="arrow-down">
-      <line x1="0" y1="0" x2="0" y2="2" stroke="#E8742A" stroke-width="1.5" />
-      <polygon points="0,4 -2,1 2,1" fill="#E8742A" />
+    <g id="arrow-right">
+      <line x1="0" y1="0" x2="3" y2="0" stroke="#E8742A" stroke-width="1.5" />
+      <polygon points="5,0 2,-2 2,2" fill="#E8742A" />
     </g>
   </defs>
 
-  <rect x="0" y="0" width="223" height="70" fill="transparent" stroke="none" />
+  <rect x="0" y="0" width="227" height="46" fill="transparent" stroke="none" />
 
   <!-- Top Panel: Correction Rate -->
-  <rect x="0" y="0" width="223" height="32" rx="4" fill="#F4F6F8" />
-  <text x="5" y="20" font-size="8.5" fill="#E8742A" data-free="1">Correction Rate</text>
+  <rect x="0" y="0" width="227" height="22" rx="4" fill="#F4F6F8" />
+  <text x="5" y="14" font-size="8.5" fill="#E8742A" data-free="1">Correction Rate</text>
   
-  <!-- Row 1 -->
-  <use href="#card-red" x="70" y="4" />
-  <use href="#card-red" x="81" y="4" />
-  <use href="#card-red" x="92" y="4" />
-  <use href="#card-green" x="103" y="4" />
-  <use href="#card-green" x="114" y="4" />
+  <use href="#card-red" x="65" y="5" />
+  <use href="#card-red" x="76" y="5" />
   
-  <!-- Arrow -->
-  <use href="#arrow-down" x="96.5" y="16" />
+  <use href="#arrow-right" x="89" y="10" />
 
-  <!-- Row 2 -->
-  <use href="#card-red" x="70" y="19" />
-  <use href="#card-green" x="81" y="19" />
-  <use href="#card-green" x="92" y="19" />
-  <use href="#card-green" x="103" y="19" />
-  <use href="#card-green" x="114" y="19" />
+  <use href="#card-green" x="98" y="5" />
+  <use href="#card-green" x="109" y="5" />
 
-  <!-- Formula & Caption -->
-  <text x="132" y="14" font-size="8.5" fill="#222222" data-free="1">WC / (WC + WW)</text>
-  <text x="132" y="26" font-size="7.1" fill="#222222" data-caption="1">wrong answers fixed</text>
+  <text x="125" y="11" font-size="8.5" fill="#222222" data-free="1">WC / (WC + WW)</text>
+  <text x="125" y="20" font-size="7.1" fill="#222222" data-caption="1">wrong answers fixed</text>
 
   <!-- Bottom Panel: Damage Rate -->
-  <rect x="0" y="38" width="223" height="32" rx="4" fill="#F4F6F8" />
-  <text x="5" y="58" font-size="8.5" fill="#E8742A" data-free="1">Damage Rate</text>
+  <rect x="0" y="24" width="227" height="22" rx="4" fill="#F4F6F8" />
+  <text x="5" y="38" font-size="8.5" fill="#E8742A" data-free="1">Damage Rate</text>
   
-  <!-- Row 1 -->
-  <use href="#card-green" x="70" y="42" />
-  <use href="#card-green" x="81" y="42" />
-  <use href="#card-green" x="92" y="42" />
-  <use href="#card-green" x="103" y="42" />
-  <use href="#card-green" x="114" y="42" />
+  <use href="#card-green" x="65" y="29" />
+  <use href="#card-green" x="76" y="29" />
   
-  <!-- Arrow -->
-  <use href="#arrow-down" x="96.5" y="54" />
+  <use href="#arrow-right" x="89" y="34" />
 
-  <!-- Row 2 -->
-  <use href="#card-green" x="70" y="57" />
-  <use href="#card-green" x="81" y="57" />
-  <use href="#card-red" x="92" y="57" />
-  <use href="#card-green" x="103" y="57" />
-  <use href="#card-green" x="114" y="57" />
+  <use href="#card-red" x="98" y="29" />
+  <use href="#card-green" x="109" y="29" />
 
-  <!-- Formula & Caption -->
-  <text x="132" y="52" font-size="8.5" fill="#222222" data-free="1">CW / (CC + CW)</text>
-  <text x="132" y="64" font-size="7.1" fill="#222222" data-caption="1">correct answers ruined</text>
-
+  <text x="125" y="35" font-size="8.5" fill="#222222" data-free="1">CW / (CC + CW)</text>
+  <text x="125" y="44" font-size="7.1" fill="#222222" data-caption="1">correct answers ruined</text>
 </svg>

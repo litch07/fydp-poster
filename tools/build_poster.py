@@ -81,11 +81,11 @@ html, body {{
   padding: 30mm;
   display: flex;
   flex-direction: column;
-  gap: 12mm;
+  gap: 6mm;
 }}
 .row {{
   display: flex;
-  gap: 12mm;
+  gap: 6mm;
   flex-shrink: 0;
 }}
 .card {{
@@ -124,8 +124,8 @@ html, body {{
   border-radius: 8px;
   display: flex;
   align-items: flex-start;
-  padding: 2.5mm 4mm;
-  margin-bottom: 2mm;
+  padding: 1.5mm 4mm;
+  margin-bottom: 1.5mm;
   gap: 4mm;
 }}
 .strip:last-child {{
@@ -170,57 +170,64 @@ html, body {{
 /* Header card specifics */
 .header-inner {{
   display: flex;
-  align-items: center;
+  align-items: stretch;
   height: 100%;
-  gap: 10mm;
+  gap: 12mm;
   color: white;
 }}
 .header-logo {{
-  width: 100mm;
-  height: 100mm;
+  width: 55mm;
+  height: 55mm;
   flex-shrink: 0;
   display: flex;
   align-items: center;
   justify-content: center;
   background: white;
   border-radius: 8px;
+  align-self: flex-start;
 }}
 .header-logo img {{
-  max-width: 90mm;
-  max-height: 90mm;
+  max-width: 45mm;
+  max-height: 45mm;
   object-fit: contain;
 }}
 .header-center {{
-  flex: 1;
+  width: 478mm;
+  display: flex;
+  flex-direction: column;
+  gap: 6mm;
+  justify-content: space-between;
+}}
+.team-pill {{
+  background: #E8742A;
+  border-radius: 20px;
+  padding: 3mm 8mm;
+  font-size: 28pt;
+  font-weight: bold;
+  color: white;
+  align-self: flex-start;
+  line-height: 1;
 }}
 .header-title {{
-  font-size: 80pt;
+  font-size: 64pt;
   font-weight: bold;
   line-height: 1.1;
   color: white;
 }}
-.header-authors {{
-  font-size: 36pt;
-  color: white;
-  margin-top: 4mm;
-  line-height: 1.2;
-}}
 .header-dept {{
-  font-size: 28pt;
-  color: rgba(255,255,255,0.85);
-  margin-top: 2mm;
+  font-size: 24pt;
+  color: white;
+  line-height: 1.1;
 }}
-.header-faculty {{
+.header-faculty-row {{
   display: flex;
-  flex-direction: column;
-  gap: 4mm;
-  flex-shrink: 0;
-  min-width: 150mm;
+  gap: 6mm;
 }}
 .faculty-tile {{
   background: #E8EDF3;
   border-radius: 8px;
   padding: 3mm 5mm;
+  flex: 1;
 }}
 .faculty-role {{
   font-size: 20pt;
@@ -231,6 +238,31 @@ html, body {{
   font-size: 24pt;
   color: #1F3A5F;
   line-height: 1.2;
+}}
+
+.header-right {{
+  width: 200mm;
+  background: #E8EDF3;
+  border-radius: 8px;
+  padding: 6mm;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}}
+.author-row {{
+  display: flex;
+  align-items: baseline;
+  gap: 2mm;
+  white-space: nowrap;
+}}
+.author-name {{
+  font-size: 24pt;
+  font-weight: bold;
+  color: #1F3A5F;
+}}
+.author-id {{
+  font-size: 24pt;
+  color: #E8742A;
 }}
 
 /* Hero card */
@@ -328,8 +360,8 @@ html, body {{
   margin-bottom: 2mm;
 }}
 .dataset-diagram svg {{
-  width: 246mm;
-  height: 55mm;
+  width: 100%;
+  height: auto;
 }}
 
 /* Outcomes card: diagram only */
@@ -338,10 +370,12 @@ html, body {{
   display: flex;
   align-items: center;
   justify-content: center;
+  min-height: 0;
 }}
 .outcomes-diagram svg {{
   width: 100%;
-  height: 155mm;
+  height: auto;
+  max-height: 100%;
   display: block;
   margin: 0 auto;
 }}
@@ -354,8 +388,8 @@ html, body {{
   margin-bottom: 2mm;
 }}
 .metrics-diagram svg {{
-  width: 223mm;
-  height: 55mm;
+  width: 100%;
+  height: auto;
 }}
 .strip .text-orange {{
   color: #E8742A;
@@ -368,10 +402,12 @@ html, body {{
   display: flex;
   align-items: center;
   justify-content: center;
+  min-height: 0;
 }}
 .gap-diagram svg {{
-  width: 360mm;
-  height: 85mm;
+  width: 100%;
+  height: auto;
+  max-height: 100%;
 }}
 
 /* Pilot system */
@@ -472,29 +508,36 @@ html, body {{
 <div class="poster">
 
   <!-- HEADER -->
-  <div class="card card-header" data-card="header" style="width:781mm; height:150mm;">
+  <div class="card card-header" data-card="header" style="width:781mm; height:180mm;">
     <div class="header-inner">
       <div class="header-logo">
         <img src="data:image/webp;base64,{logo_b64}" alt="UIU Logo">
       </div>
       <div class="header-center">
+        <div class="team-pill">Team: The Night's Watch</div>
         <div class="header-title">ReasonAudit: Evaluating Error Awareness<br>and Self-Correction in Large Language Models</div>
-        <div class="header-authors">Md. Assaduzzaman Nur &middot; Shahriar Yasin &middot; Shakib Ahmed &middot; Sadid Ahmed &middot; Rukan Mia</div>
         <div class="header-dept">Department of Computer Science and Engineering, United International University</div>
+        <div class="header-faculty-row">
+          <div class="faculty-tile">
+            <div class="faculty-role">Supervisor</div>
+            <div class="faculty-name">Sadia Islam, Assistant Professor</div>
+          </div>
+          <div class="faculty-tile">
+            <div class="faculty-role">Co-Supervisor</div>
+            <div class="faculty-name">Mr. Nahid Hossain, Assistant Professor</div>
+          </div>
+          <div class="faculty-tile">
+            <div class="faculty-role">Course Teacher</div>
+            <div class="faculty-name">Dr. Riasat Azim, Associate Professor</div>
+          </div>
+        </div>
       </div>
-      <div class="header-faculty">
-        <div class="faculty-tile">
-          <div class="faculty-role">Supervisor</div>
-          <div class="faculty-name">Sadia Islam, Assistant Professor</div>
-        </div>
-        <div class="faculty-tile">
-          <div class="faculty-role">Co-Supervisor</div>
-          <div class="faculty-name">Mr. Nahid Hossain, Assistant Professor</div>
-        </div>
-        <div class="faculty-tile">
-          <div class="faculty-role">Course Teacher</div>
-          <div class="faculty-name">Dr. Riasat Azim, Associate Professor</div>
-        </div>
+      <div class="header-right">
+        <div class="author-row"><div class="author-name">Md. Assaduzzaman Nur</div><div class="author-id">(0112230442)</div></div>
+        <div class="author-row"><div class="author-name">Shahriar Yasin</div><div class="author-id">(0112230638)</div></div>
+        <div class="author-row"><div class="author-name">Shakib Ahmed</div><div class="author-id">(0112230421)</div></div>
+        <div class="author-row"><div class="author-name">Sadid Ahmed</div><div class="author-id">(0112330154)</div></div>
+        <div class="author-row"><div class="author-name">Rukan Mia</div><div class="author-id">(0112231036)</div></div>
       </div>
     </div>
   </div>
@@ -511,7 +554,7 @@ html, body {{
   <!-- ROW A -->
   <div class="row">
     <!-- Motivation -->
-    <div class="card card-gray" data-card="motivation" style="width:384.5mm; height:130mm;">
+    <div class="card card-gray" data-card="motivation" style="width:387.5mm; height:150mm;">
       <div class="card-inner">
         <div class="title-tab"><span>Motivation</span></div>
         <div class="strip"><div class="marker"><div class="dot"></div></div><div class="text">LLMs are used in coding, teaching, and research, often with little human checking.</div></div>
@@ -521,7 +564,7 @@ html, body {{
       </div>
     </div>
     <!-- Objectives -->
-    <div class="card card-lnavy" data-card="objectives" style="width:384.5mm; height:130mm;">
+    <div class="card card-lnavy" data-card="objectives" style="width:387.5mm; height:150mm;">
       <div class="card-inner">
         <div class="title-tab"><span>Objectives</span></div>
         <div class="strip"><div class="marker"><div class="badge">1</div></div><div class="text">Build a labeled reasoning dataset with verified answers and difficulty tags.</div></div>
@@ -555,7 +598,7 @@ html, body {{
   <!-- ROW C -->
   <div class="row">
     <!-- Dataset -->
-    <div class="card card-lnavy" data-card="dataset" style="width:270mm; height:212mm;">
+    <div class="card card-lnavy" data-card="dataset" style="width:274mm; height:198mm;">
       <div class="card-inner">
         <div class="title-tab"><span>Dataset</span></div>
         <div class="dataset-diagram">{dataset_svg}</div>
@@ -566,14 +609,14 @@ html, body {{
       </div>
     </div>
     <!-- Outcome Buckets -->
-    <div class="card card-gray" data-card="outcome-buckets" style="width:240mm; height:212mm;">
+    <div class="card card-gray" data-card="outcome-buckets" style="width:244mm; height:198mm;">
       <div class="card-inner">
         <div class="title-tab"><span>Outcome Buckets</span></div>
         <div class="outcomes-diagram">{outcomes_svg}</div>
       </div>
     </div>
     <!-- Metrics -->
-    <div class="card card-lnavy" data-card="metrics" style="width:247mm; height:212mm;">
+    <div class="card card-lnavy" data-card="metrics" style="width:251mm; height:198mm;">
       <div class="card-inner">
         <div class="title-tab"><span>Metrics</span></div>
         <div class="metrics-diagram">{metrics_svg}</div>
@@ -588,14 +631,14 @@ html, body {{
   <!-- ROW D -->
   <div class="row">
     <!-- Research Gap -->
-    <div class="card card-gray" data-card="research-gap" style="width:384.5mm; height:135mm;">
+    <div class="card card-gray" data-card="research-gap" style="width:403mm; height:135mm;">
       <div class="card-inner">
         <div class="title-tab"><span>Research Gap</span></div>
         <div class="gap-diagram">{gap_svg}</div>
       </div>
     </div>
     <!-- Pilot System -->
-    <div class="card card-lnavy" data-card="pilot-system" style="width:384.5mm; height:135mm;">
+    <div class="card card-lnavy" data-card="pilot-system" style="width:372mm; height:135mm;">
       <div class="card-inner">
         <div class="title-tab"><span>Pilot System</span></div>
         <div class="pilot-inner">
@@ -616,7 +659,7 @@ html, body {{
   <!-- ROW E -->
   <div class="row">
     <!-- Status -->
-    <div class="card card-gray" data-card="status" style="width:384.5mm; height:100mm;">
+    <div class="card card-gray" data-card="status" style="width:387.5mm; height:100mm;">
       <div class="card-inner">
         <div class="title-tab"><span>Status and Next Steps</span></div>
         <div class="chevrons">
@@ -632,7 +675,7 @@ html, body {{
       </div>
     </div>
     <!-- References -->
-    <div class="card card-lnavy" data-card="references" style="width:384.5mm; height:100mm;">
+    <div class="card card-lnavy" data-card="references" style="width:387.5mm; height:100mm;">
       <div class="card-inner">
         <div class="title-tab"><span>References</span></div>
         <div class="ref-inner">
