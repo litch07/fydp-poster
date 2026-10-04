@@ -27,6 +27,13 @@ def load_svg(name):
         content = content[content.index('?>') + 2:].strip()
     return content
 
+import base64
+def load_image_b64(path):
+    with open(os.path.join(PROJ, path), 'rb') as f:
+        return base64.b64encode(f.read()).decode('utf-8')
+
+pilot_img_b64 = load_image_b64('assets/web-page.png')
+
 hero_svg = load_svg('hero.svg')
 pipeline_svg = load_svg('pipeline.svg')
 dataset_svg = load_svg('dataset.svg')
@@ -321,7 +328,7 @@ html, body {{
 }}
 .dataset-diagram svg {{
   width: 246mm;
-  height: 38mm;
+  height: 55mm;
 }}
 
 /* Outcomes card: diagram only */
@@ -332,8 +339,10 @@ html, body {{
   justify-content: center;
 }}
 .outcomes-diagram svg {{
-  width: 216mm;
-  height: 140mm;
+  width: 100%;
+  height: 155mm;
+  display: block;
+  margin: 0 auto;
 }}
 
 /* Metrics card */
@@ -345,7 +354,7 @@ html, body {{
 }}
 .metrics-diagram svg {{
   width: 223mm;
-  height: 38mm;
+  height: 55mm;
 }}
 .strip .text-orange {{
   color: #E8742A;
@@ -360,7 +369,7 @@ html, body {{
   justify-content: center;
 }}
 .gap-diagram svg {{
-  width: 376mm;
+  width: 360mm;
   height: 85mm;
 }}
 
@@ -383,17 +392,14 @@ html, body {{
   align-items: center;
   justify-content: center;
 }}
-.screenshot-placeholder {{
+.pilot-screenshot {{
   width: 100%;
-  flex: 1;
+  height: auto;
+  max-height: 85mm;
+  object-fit: contain;
   border: 3px solid #1F3A5F;
   border-radius: 8px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 24pt;
-  color: #6B7280;
-  background: #F4F6F8;
+  box-sizing: border-box;
 }}
 .pilot-caption {{
   font-size: 20pt;
@@ -504,7 +510,7 @@ html, body {{
   <!-- ROW A -->
   <div class="row">
     <!-- Motivation -->
-    <div class="card card-gray" data-card="motivation" style="width:384.5mm; height:150mm;">
+    <div class="card card-gray" data-card="motivation" style="width:384.5mm; height:130mm;">
       <div class="card-inner">
         <div class="title-tab"><span>Motivation</span></div>
         <div class="strip"><div class="marker"><div class="dot"></div></div><div class="text">LLMs are used in coding, teaching, and research, often with little human checking.</div></div>
@@ -514,7 +520,7 @@ html, body {{
       </div>
     </div>
     <!-- Objectives -->
-    <div class="card card-lnavy" data-card="objectives" style="width:384.5mm; height:150mm;">
+    <div class="card card-lnavy" data-card="objectives" style="width:384.5mm; height:130mm;">
       <div class="card-inner">
         <div class="title-tab"><span>Objectives</span></div>
         <div class="strip"><div class="marker"><div class="badge">1</div></div><div class="text">Build a labeled reasoning dataset with verified answers and difficulty tags.</div></div>
@@ -548,7 +554,7 @@ html, body {{
   <!-- ROW C -->
   <div class="row">
     <!-- Dataset -->
-    <div class="card card-lnavy" data-card="dataset" style="width:270mm; height:192mm;">
+    <div class="card card-lnavy" data-card="dataset" style="width:270mm; height:212mm;">
       <div class="card-inner">
         <div class="title-tab"><span>Dataset</span></div>
         <div class="dataset-diagram">{dataset_svg}</div>
@@ -559,14 +565,14 @@ html, body {{
       </div>
     </div>
     <!-- Outcome Buckets -->
-    <div class="card card-gray" data-card="outcome-buckets" style="width:240mm; height:192mm;">
+    <div class="card card-gray" data-card="outcome-buckets" style="width:240mm; height:212mm;">
       <div class="card-inner">
         <div class="title-tab"><span>Outcome Buckets</span></div>
         <div class="outcomes-diagram">{outcomes_svg}</div>
       </div>
     </div>
     <!-- Metrics -->
-    <div class="card card-lnavy" data-card="metrics" style="width:247mm; height:192mm;">
+    <div class="card card-lnavy" data-card="metrics" style="width:247mm; height:212mm;">
       <div class="card-inner">
         <div class="title-tab"><span>Metrics</span></div>
         <div class="metrics-diagram">{metrics_svg}</div>
@@ -581,14 +587,14 @@ html, body {{
   <!-- ROW D -->
   <div class="row">
     <!-- Research Gap -->
-    <div class="card card-gray" data-card="research-gap" style="width:400mm; height:135mm;">
+    <div class="card card-gray" data-card="research-gap" style="width:384.5mm; height:135mm;">
       <div class="card-inner">
         <div class="title-tab"><span>Research Gap</span></div>
         <div class="gap-diagram">{gap_svg}</div>
       </div>
     </div>
     <!-- Pilot System -->
-    <div class="card card-lnavy" data-card="pilot-system" style="width:369mm; height:135mm;">
+    <div class="card card-lnavy" data-card="pilot-system" style="width:384.5mm; height:135mm;">
       <div class="card-inner">
         <div class="title-tab"><span>Pilot System</span></div>
         <div class="pilot-inner">
@@ -598,7 +604,7 @@ html, body {{
             <div class="strip"><div class="marker"><div class="dot"></div></div><div class="text">Automatic retry on rate limits, CSV export.</div></div>
           </div>
           <div class="pilot-right">
-            <div class="screenshot-placeholder">Screenshot placeholder</div>
+            <img class="pilot-screenshot" src="data:image/png;base64,{pilot_img_b64}" alt="Pilot System Screenshot">
             <div class="pilot-caption">Illustrative pilot data.</div>
           </div>
         </div>

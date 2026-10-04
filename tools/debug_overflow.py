@@ -49,7 +49,7 @@ with sync_playwright() as p:
     page.goto(Path("poster.html").resolve().as_uri(), wait_until="networkidle")
     page.wait_for_timeout(2000)
     
-    for card_name in ["dataset", "metrics"]:
+    for card_name in ["motivation", "objectives"]:
         result = page.evaluate(JS, card_name)
         print(f"\n{card_name}:")
         print(f"  card_h={result['card_h']}mm pad_t={result['pad_t']}mm pad_b={result['pad_b']}mm inner_h={result['inner_h']}mm")
