@@ -198,6 +198,13 @@ html, body {{
   line-height: 1.1;
   color: white;
 }}
+.header-team {{
+  font-size: 36pt;
+  color: #E8742A;
+  font-weight: bold;
+  text-align: right;
+  margin-bottom: 6mm;
+}}
 .header-authors {{
   font-size: 36pt;
   color: white;
@@ -261,6 +268,7 @@ html, body {{
   color: #6B7280;
   margin-top: 2mm;
   flex-shrink: 0;
+  text-align: center;
 }}
 
 /* Card content layout */
@@ -277,7 +285,7 @@ html, body {{
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 2mm;
+  margin-bottom: 8mm;
   min-height: 0;
 }}
 .method-diagram svg {{
@@ -324,7 +332,7 @@ html, body {{
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 2mm;
+  margin-bottom: 8mm;
 }}
 .dataset-diagram svg {{
   width: 246mm;
@@ -343,6 +351,7 @@ html, body {{
   height: 155mm;
   display: block;
   margin: 0 auto;
+  transform: translateX(-8mm);
 }}
 
 /* Metrics card */
@@ -350,7 +359,7 @@ html, body {{
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 2mm;
+  margin-bottom: 8mm;
 }}
 .metrics-diagram svg {{
   width: 223mm;
@@ -482,6 +491,7 @@ html, body {{
         <div class="header-dept">Department of Computer Science and Engineering, United International University</div>
       </div>
       <div class="header-faculty">
+        <div class="header-team">Team Night's Watch</div>
         <div class="faculty-tile">
           <div class="faculty-role">Supervisor</div>
           <div class="faculty-name">Sadia Islam, Assistant Professor</div>
@@ -617,7 +627,7 @@ html, body {{
     <!-- Status -->
     <div class="card card-gray" data-card="status" style="width:384.5mm; height:100mm;">
       <div class="card-inner">
-        <div class="title-tab"><span>Status and Next Steps</span></div>
+        <div class="title-tab"><span>Future Works</span></div>
         <div class="chevrons">
           <div class="chevron">Done</div>
           <div class="chevron active">In progress</div>
