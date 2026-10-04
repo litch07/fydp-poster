@@ -1,0 +1,69 @@
+<svg width="223" height="70" viewBox="0 0 223 70" xmlns="http://www.w3.org/2000/svg" font-family="Carlito, sans-serif">
+  <defs>
+    <g id="card-green">
+      <rect x="0" y="0" width="9" height="11" rx="1.5" fill="white" stroke="#1F3A5F" stroke-width="1"/>
+      <path d="M 2 5.5 L 4 7.5 L 7 3" stroke="#3E8E6B" stroke-width="1.5" fill="none"/>
+    </g>
+    <g id="card-red">
+      <rect x="0" y="0" width="9" height="11" rx="1.5" fill="white" stroke="#1F3A5F" stroke-width="1"/>
+      <path d="M 2.5 3 L 6.5 8 M 6.5 3 L 2.5 8" stroke="#C0504D" stroke-width="1.5" fill="none"/>
+    </g>
+    <g id="arrow-down">
+      <line x1="0" y1="0" x2="0" y2="2" stroke="#E8742A" stroke-width="1.5" />
+      <polygon points="0,4 -2,1 2,1" fill="#E8742A" />
+    </g>
+  </defs>
+
+  <rect x="0" y="0" width="223" height="70" fill="transparent" stroke="none" />
+
+  <!-- Top Panel: Correction Rate -->
+  <rect x="0" y="0" width="223" height="32" rx="4" fill="#F4F6F8" />
+  <text x="5" y="20" font-size="8.5" fill="#E8742A" data-free="1">Correction Rate</text>
+  
+  <!-- Row 1 -->
+  <use href="#card-red" x="70" y="4" />
+  <use href="#card-red" x="81" y="4" />
+  <use href="#card-red" x="92" y="4" />
+  <use href="#card-green" x="103" y="4" />
+  <use href="#card-green" x="114" y="4" />
+  
+  <!-- Arrow -->
+  <use href="#arrow-down" x="96.5" y="16" />
+
+  <!-- Row 2 -->
+  <use href="#card-red" x="70" y="19" />
+  <use href="#card-green" x="81" y="19" />
+  <use href="#card-green" x="92" y="19" />
+  <use href="#card-green" x="103" y="19" />
+  <use href="#card-green" x="114" y="19" />
+
+  <!-- Formula & Caption -->
+  <text x="132" y="14" font-size="8.5" fill="#222222" data-free="1">WC / (WC + WW)</text>
+  <text x="132" y="26" font-size="7.1" fill="#222222" data-caption="1">wrong answers fixed</text>
+
+  <!-- Bottom Panel: Damage Rate -->
+  <rect x="0" y="38" width="223" height="32" rx="4" fill="#F4F6F8" />
+  <text x="5" y="58" font-size="8.5" fill="#E8742A" data-free="1">Damage Rate</text>
+  
+  <!-- Row 1 -->
+  <use href="#card-green" x="70" y="42" />
+  <use href="#card-green" x="81" y="42" />
+  <use href="#card-green" x="92" y="42" />
+  <use href="#card-green" x="103" y="42" />
+  <use href="#card-green" x="114" y="42" />
+  
+  <!-- Arrow -->
+  <use href="#arrow-down" x="96.5" y="54" />
+
+  <!-- Row 2 -->
+  <use href="#card-green" x="70" y="57" />
+  <use href="#card-green" x="81" y="57" />
+  <use href="#card-red" x="92" y="57" />
+  <use href="#card-green" x="103" y="57" />
+  <use href="#card-green" x="114" y="57" />
+
+  <!-- Formula & Caption -->
+  <text x="132" y="52" font-size="8.5" fill="#222222" data-free="1">CW / (CC + CW)</text>
+  <text x="132" y="64" font-size="7.1" fill="#222222" data-caption="1">correct answers ruined</text>
+
+</svg>
